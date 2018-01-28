@@ -13,6 +13,9 @@
 # limitations under the License.
 #
 
+#	$(LOCAL_PATH)/proprietary/lib/libUMP.so:system/lib/libUMP.so \
+#	$(LOCAL_PATH)/proprietary/lib/modules/ump.ko:system/lib/modules/ump.ko \
+
 LOCAL_PATH := vendor/rockchip/rk3066-common
 
 PRODUCT_COPY_FILES += \
@@ -29,7 +32,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/libMali.so:system/lib/libMali.so \
     $(LOCAL_PATH)/proprietary/lib/libion.so:system/lib/libion.so \
-    $(LOCAL_PATH)/proprietary/lib/libUMP.so:system/lib/libUMP.so \
     $(LOCAL_PATH)/proprietary/lib/libasound.so:system/lib/libasound.so \
     $(LOCAL_PATH)/proprietary/lib/libjpeghwdec.so:system/lib/libjpeghwdec.so \
     $(LOCAL_PATH)/proprietary/lib/libjpeghwenc.so:system/lib/libjpeghwenc.so \
@@ -59,7 +61,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/modules/rkwifi.ko:system/lib/modules/rkwifi.ko \
     $(LOCAL_PATH)/proprietary/lib/modules/rtl8192cu.ko:system/lib/modules/rtl8192cu.ko \
     $(LOCAL_PATH)/proprietary/lib/modules/rtl8711.ko:system/lib/modules/rtl8711.ko \
-    $(LOCAL_PATH)/proprietary/lib/modules/ump.ko:system/lib/modules/ump.ko \
     $(LOCAL_PATH)/proprietary/lib/modules/wlan.ko:system/lib/modules/wlan.ko \
     $(LOCAL_PATH)/proprietary/lib/modules/rk30xxnand_ko.ko.3.0.8+:root/rk30xxnand_ko.ko.3.0.8+
 
@@ -75,7 +76,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/proprietary/lib/hw/power.rk30xx.so:system/lib/hw/power.rk30xx.so \
     $(LOCAL_PATH)/proprietary/lib/hw/sensors.rk30board.so:system/lib/hw/sensors.rk30board.so \
     $(LOCAL_PATH)/proprietary/lib/hw/alsa.default.so:system/lib/hw/alsa.default.so
-    #$(LOCAL_PATH)/proprietary/lib/hw/audio.a2dp.default.so:system/lib/hw/audio.a2dp.default.so
+
+#	$(LOCAL_PATH)/proprietary/lib/hw/audio.a2dp.default.so:system/lib/hw/audio.a2dp.default.so
 
 # Flash
 #PRODUCT_COPY_FILES += \
