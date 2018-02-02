@@ -42,8 +42,8 @@ then
 fi
 shift
 
-repo sync -j32 -n
-repo sync -j32 -n
+repo sync -j5 -n
+repo sync -j5 -n
 repo sync -j2 -l
 
 DEVICES=$(for i in device/rockchip/*/proprietary-blobs.txt ; do basename $(dirname $i) ; done)
@@ -62,7 +62,7 @@ else
   do
     rm -rf out
     lunch lineage_$DEVICENAME-userdebug
-    make -j64
+    make -j2
     cat out/target/product/$DEVICENAME/installed-files.txt |
       cut -b 15- |
       sort -f > $ARCHIVEDIR/$DEVICENAME-with.txt
@@ -73,7 +73,7 @@ else
   do
     rm -rf out
     lunch lineage_$DEVICENAME-userdebug
-    make -j64
+    make -j2
     cat out/target/product/$DEVICENAME/installed-files.txt |
       cut -b 15- |
       sort -f > $ARCHIVEDIR/$DEVICENAME-without.txt
